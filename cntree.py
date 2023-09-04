@@ -176,7 +176,7 @@ class CNTree():
         try:
             self._sanitize_start_dir(start_dir)
 
-        # this exception gets raised if the param=None or the param is not a dir
+        # this exception gets raised if start_dir is None or not a dir
         except OSError as exception:
             err_string = CNTree.ERR_NOT_A_DIR.format(start_dir)
             raise OSError(err_string) from exception
